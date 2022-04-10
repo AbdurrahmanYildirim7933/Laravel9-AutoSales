@@ -30,6 +30,16 @@
 <body>
 
 @include('home._header')
+<div class="page-section" style="background: rgba(36, 41, 49, 1); padding-top:33px;-webkit-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);-moz-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);box-shadow: 0 0 5px rgba(0,0,0,.4), inset 0px 2px rgba(255,255,255,.3);border: solid 1px #242931;margin-bottom:110px;">
+    <div class="container">
+        <div class="row">
+            <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include('home._footer')
 </body>
