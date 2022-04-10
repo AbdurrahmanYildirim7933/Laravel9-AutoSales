@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/eskilaravel', function () {
     return view('welcome');
+});
+Route::redirect('/anasayfa', '/home')->name('anasayfa');;
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');;
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');;
+// Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id', '[0-9]+','name'=>'[A-Za-z]+']);;
+Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');;
+
+Route::get('/', function () {
+    return view('home.index ');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
