@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AutoMobile</title>
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="author" content="J@yield('Nogai')">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
     <link href="assets/css/iconmoon.css" rel="stylesheet">
@@ -26,21 +29,27 @@
     <script src="assets/scripts/jquery.js"></script>
     <script src="assets/scripts/modernizr.js"></script>
     <script src="assets/scripts/bootstrap.min.js"></script>
+
+    @yield('css')
+    @yield('headerjs')
 </head>
 <body>
 
 @include('home._header')
-<div class="page-section" style="background: rgba(36, 41, 49, 1); padding-top:33px;-webkit-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);-moz-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);box-shadow: 0 0 5px rgba(0,0,0,.4), inset 0px 2px rgba(255,255,255,.3);border: solid 1px #242931;margin-bottom:110px;">
-    <div class="container">
-        <div class="row">
-            <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="row">
-                    </div>
-            </div>
-        </div>
-    </div>
+<!-- Main Start -->
+<div class="main-section">
+
+    @include('home._mainbannerform')
+    @include('home._category')
+    @include('home._slider')
+
+    @section('content')
+        içerik alanı
+    @show
+
 </div>
 
 @include('home._footer')
+@yield('footerjs')
 </body>
 </html>
