@@ -108,10 +108,5 @@
     </div>
 </footer>
 <!-- Footer End -->
-</div>
-<script src="assets/scripts/responsive.menu.js"></script>
-<script src="assets/scripts/chosen.select.js"></script>
-<script src="assets/scripts/slick.js"></script>
-<script src="assets/scripts/echo.js"></script>
-<!-- Put all Functions in functions.js -->
-<script src="assets/scripts/functions.js"></script>
+
+

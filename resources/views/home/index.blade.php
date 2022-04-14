@@ -744,6 +744,19 @@
         </div>
     </div>
     <!--tabs section-->
+    <div class="page-section" style="background:#19171a;;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="cs-ad" style="text-align:center; padding:55px 0 25px;">
+                        <div class="cs-media">
+                            <figure> <a href="#"><img alt="" src="assets/extra-images/cs-ad-img.jpg"></a> </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 

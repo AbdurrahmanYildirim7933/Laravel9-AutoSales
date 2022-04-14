@@ -5,7 +5,7 @@
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                 <div class="cs-logo">
                     <div class="cs-media">
-                        <figure><a href="index-2.html"><img src="assets/images/cs-logo.png" alt="" /></a></figure>
+                        <figure><a href="index-2.html"><img src="{{asset('assets')}}/images/cs-logo.png" alt="" /></a></figure>
                     </div>
                 </div>
             </div>
@@ -423,7 +423,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="cs-wish-list"><a href="#"><i class=" icon-heart4"></i><span>0</span></a>
+                        <div class="cs-wish-list"><a href="#"><i class=" icon-heart4"></i><span>0</span></a>
                         <div class="wish-list-dropdown">
                             <strong>Post a new Ad</strong>
                             <ul>
@@ -432,7 +432,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-1.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-1.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
@@ -444,7 +444,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-2.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-2.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
@@ -456,7 +456,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-3.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-3.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
@@ -468,7 +468,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-1.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-1.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
@@ -480,7 +480,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-2.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-2.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
@@ -492,7 +492,7 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div class="cs-media">
                                         <a href="#">
-                                            <img src="assets/extra-images/single-banner-img-3.jpg" alt="" />
+                                            <img src="{{asset('assets')}}/extra-images/single-banner-img-3.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="cs-info">
