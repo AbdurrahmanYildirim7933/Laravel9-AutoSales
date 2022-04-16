@@ -28,8 +28,14 @@ Route::get('/', function () {
     return view('home.index ');
 });
 
-Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');;
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//******************************ADMIN PANEL ROUTES***************************************
+Route::get('/admin', [App\Http\Controllers\AdminPanel\HomeController::class, 'index'])->name('adminhome');;
+
+//******************************ADMIN CATEGORY ROUTES***************************************
+Route::get('/admin/category', [App\Http\Controllers\AdminPanel\CategoryController::class, 'index'])->name('admin_category');;
+Route::get('/admin/category/create', [App\Http\Controllers\AdminPanel\CategoryController::class, 'create'])->name('admin_category_create');;
+Route::post('/admin/category/store', [App\Http\Controllers\AdminPanel\CategoryController::class, 'store'])->name('admin_category_store');;

@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.frontbase')
 
 @section('title', 'Laravel Car Sale')
 @section('description')
