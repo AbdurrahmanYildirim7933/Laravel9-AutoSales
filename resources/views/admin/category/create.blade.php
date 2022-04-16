@@ -41,7 +41,7 @@
                     </div>
                         <div class="form-group">
                             <label>File upload</label>
-                            <input type="file" name="img[]" class="file-upload-default">
+                            <input type="file" name="image" class="file-upload-default">
                             <div class="input-group col-xs-12">
                                 <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
                                 <span class="input-group-append">
@@ -52,11 +52,9 @@
                         <div class="form-group">
                             <label>Status</label>
                             <select class="form-control" name="status">
-                                <option>Opn1</option>
-                                <option>Opn2</option>
-                                <option>Opt3</option>
-                                <option>Opn4</option>
-                                <option>Opn5</option>
+                                <option>True</option>
+                                <option>False</option>
+
                             </select>
                         </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
