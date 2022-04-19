@@ -71,10 +71,10 @@
             </a>
         </li>
 
-        <li class="navbar-header">LABELS</li>
+        <li class="navbar-header fas fa-life-saver menu-icon">LABELS</li>
         <li class="nav-item">
             <a class="nav-link" href="/admin/setting">
-                <i class="nav-icon fas fa-cogs "></i>
+                <i class="nav-icon fas fa-cogs menu-icon"></i>
                 <span class="menu-title">Settings</span>
             </a>
         </li>
