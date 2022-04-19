@@ -25,7 +25,7 @@
         <section class="content">
 
         <div class="card">
-                    <form role="form" action="{{route('admin.category.update',['id' => $data->id])}}" method="post">
+                    <form role="form" action="{{route('admin.category.update',['id' => $data->id])}}" method="post" enctype="multipart/form-data">
                     @csrf
                         <div class="form-group">
                         <label for="exampleInputName1">Title</label>
@@ -40,13 +40,12 @@
                         <input type="text" class="form-control" name="description" value="{{$data->description}}">
                     </div>
                         <div class="form-group">
-                            <label>File upload</label>
-                            <input type="file" name="image" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                                <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
-                                <span class="input-group-append">
-                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
+                            <label for="exampleInputFile">Image</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="image">
+                                    <label class="custom-file-label" for="exampleInputFile">Choose image file</label>
+                        </div>
                             </div>
                         </div>
                         <div class="form-group">

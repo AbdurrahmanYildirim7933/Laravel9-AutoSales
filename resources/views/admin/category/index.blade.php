@@ -26,7 +26,6 @@
         <div class="card-body">
             <h4 class="card-title">Category List</h4>
             <p class="card-description">
-                Add class <code>.table-bordered</code>
             </p>
             <div class="table-responsive">
                 <table class="table table-bordered">
@@ -36,7 +35,7 @@
                         <th>Title</th>
                         <th>Keywords</th>
                         <th>Description</th>
-                        <th>Image</th>
+                        <th style="width: 400px">Image</th>
                         <th>Status</th>
                         <th style="width: 40px">Edit</th>
                         <th style="width: 40px">Delete</th>
@@ -50,11 +49,15 @@
                         <td>{{$rs->title}}</td>
                         <td>{{$rs->keywords}}</td>
                         <td>{{$rs->description}}</td>
-                        <td>{{$rs->image}}</td>
+                        <td>
+                        @if($rs->image)
+                          <img src="{{Storage::url($rs->image)}}" style="height: 70px; width:70px" >
+                            @endif
+                        </td>
                         <td>{{$rs->status}}</td>
                         <td><a href="{{route('admin.category.edit',['id' => $rs->id])}}" class="btn btn-block btn-info btn-sm">Edit<a/> </td>
                         <td><a href="{{route('admin.category.destroy',['id' => $rs->id])}}" class="btn btn-block btn-danger btn-sm"
-                            onclick="return confirm('Deleting !! Are u sure ?')">Delete<a/> </td>
+                            onclick="return confirm('Deleting !! Are u sure ?')">Delete<a/></td>
                         <td><a href="{{route('admin.category.show',['id' => $rs->id])}}" class="btn btn-block btn-success btn-sm"> Show<a/> </td>
                     </tr>
                     @endforeach

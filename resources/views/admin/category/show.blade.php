@@ -29,7 +29,6 @@
                 <div class="card-body">
                     <h4 class="card-title">Detail</h4>
                     <p class="card-description">
-                        Add class <code>.table-bordered</code>
                     </p>
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -47,7 +46,7 @@
                             </tr>
                             <tr>
                                 <th style="width: 50px">Image</th>
-                                <th></th>
+                                <th>{{$data->image}}</th>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Status</th>
