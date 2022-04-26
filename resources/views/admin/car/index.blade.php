@@ -37,19 +37,11 @@
                         <th>Model</th>
                         <th>Detail</th>
                         <th style="width: 400px">Image</th>
+                        <th>Image Gallery</th>
                         <th>Price</th>
                         <th>Kilometer</th>
                         <th>Year</th>
                         <th>Color</th>
-                        <th>Body_type</th>
-                        <th>Fuel_type</th>
-                        <th>Gear_type</th>
-                        <th>Traction_type</th>
-                        <th>Engine_power</th>
-                        <th>Engine_size</th>
-                        <th>Equipment</th>
-                        <th>Damage_record</th>
-                        <th>Address</th>
                         <th>Status</th>
                         <th style="width: 40px">Edit</th>
                         <th style="width: 40px">Delete</th>
@@ -66,8 +58,13 @@
                         <td>{{$rs->detail}}</td>
                         <td>
                         @if($rs->image)
-                          <img src="{{Storage::url($rs->image)}}" style="height: 90px; width:90px" >
+                          <img src="{{Storage::url($rs->image)}}" style="height: 100px; width:100px" >
                             @endif
+                        </td>
+                        <td><a href="{{route('admin.image.index',['cid' => $rs->id])}}"
+                               onclick="return !window.open(this.href,'','top=50 left=100 width=1100 height=700')">
+                            <img src="{{asset('assets')}}/admin/images/gallery.png" style="height: 90px; width:85px">
+                            </a>
                         </td>
                         <td>{{$rs->price}}</td>
                         <td>{{$rs->kilometer}}</td>

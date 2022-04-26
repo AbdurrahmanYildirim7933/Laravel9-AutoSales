@@ -1,10 +1,13 @@
 <?php
 
+
+use App\Http\Controllers\AdminPanel\AdminCarController;
+use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\Homecontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
-use App\Http\Controllers\AdminPanel\AdminCarController as AdminCarController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,5 +61,12 @@ Route::get('/', [AdminHomeController::class, 'index'])->name('index');;
         Route::post('/update/{id}','update')->name('update');
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/show/{id}','show')->name('show');
+    });
+//******************************ADMIN PRODUCT IMAGE GALLERY ROUTES***************************************
+    Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
+        Route::get('/{cid}','index')->name('index');
+        Route::post('/store/{cid}','store')->name('store');
+        Route::post('/update/{cid}/{id}','update')->name('update');
+        Route::get('/destroy/{cid}/{id}','destroy')->name('destroy');
     });
 });
