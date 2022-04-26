@@ -8,10 +8,10 @@
                 </div>
                 <div class="profile-name">
                     <p class="name">
-                        Welcome Jane
+                        Welcome Back Yıldırım
                     </p>
                     <p class="designation">
-                        Super Admin
+                        Develepor: Noghay
                     </p>
                 </div>
             </div>
