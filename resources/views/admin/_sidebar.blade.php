@@ -41,8 +41,8 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/admin/product" class="nav-link" ><i class="fab fa-dropbox menu-icon text-black"></i>
-                <span class="menu-title">Products</span>
+            <a href="/admin/car" class="nav-link" ><i class="fas fa-car menu-icon text-black"></i>
+                <span class="menu-title">Cars</span>
             </a>
         </li>
         <li class="nav-item">
