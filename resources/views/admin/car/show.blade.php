@@ -34,68 +34,68 @@
                         <table class="table table-bordered">
                             <tr>
                              <th style="width: 150px">Id</th>
-                             <th>{{$data->id}}</th>
+                             <td>{{$data->id}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Category</th>
-                                <th>
+                                <td>
                                     {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data->category,$data->category->title)}}
-                                    </th>
+                                    </td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Title</th>
-                                <th>{{$data->title}}</th>
+                                <td>{{$data->title}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Keywords</th>
-                                <th>{{$data->keywords}}</th>
+                                <td>{{$data->keywords}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Description</th>
-                                <th>{{$data->description}}</th>
+                                <td>{{$data->description}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Model</th>
-                                <th>{{$data->model}}</th>
+                                <td>{{$data->model}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Price</th>
-                                <th>{{$data->price}}</th>
+                                <td>{{$data->price}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Kilometer</th>
-                                <th>{{$data->kilometer}}</th>
+                                <td>{{$data->kilometer}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Year</th>
-                                <th>{{$data->year}}</th>
+                                <td>{{$data->year}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Color</th>
-                                <th>{{$data->Color}}</th>
+                                <td>{{$data->Color}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Detail Info</th>
-                                <th>{{$data->detail}}</th>
+                                <td>{{!! $data->detail !!}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Image</th>
-                                <th>@if($data->image)
+                                <td>@if($data->image)
                                         <img src="{{Storage::url($data->image)}}" style="height: 70px; width:70px" >
                                     @endif
-                                </th>
+                                </td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Status</th>
-                                <th>{{$data->status}}</th>
+                                <td>{{$data->status}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Created Date</th>
-                                <th>{{$data->created_at}}</th>
+                                <td>{{$data->created_at}}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Updated Date</th>
-                                <th>{{$data->updated_at}}</th>
+                                <td>{{$data->updated_at}}</td>
                             </tr>
 
                         </table>

@@ -2,6 +2,10 @@
 
 @section('title', 'Edit Car:'.$data->title)
 
+@section('head')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
 @section('content')
 
     <div class="content-wrapper">
@@ -56,10 +60,6 @@
                               <input type="text" class="form-control" name="model" value="{{$data->model}}">
                           </div>
                           <div class="form-group">
-                              <label for="exampleInputName1">Detail</label>
-                              <input type="text" class="form-control" name="detail" value="{{$data->detail}}">
-                          </div>
-                          <div class="form-group">
                               <label for="exampleInputName1">Price</label>
                               <input type="number" class="form-control" name="price" value="{{$data->price}}">
                           </div>
@@ -76,10 +76,21 @@
                               <input type="text" class="form-control" name="color" value="{{$data->color}}">
                           </div>
                           <div class="form-group">
-                              <label for="exampleInputName1">Detail Info</label>
-                              <textarea class="form-control" name="detail">
-                                  {{$data->detail}}"
+                              <label for="exampleInputName1">Detail</label>
+                              <textarea class="form-control" id="detail" name="detail">
+                                  {{ $data->detail }}"
                             </textarea>
+                              <script>
+                                  ClassicEditor
+                                      .create( document.querySelector( '#detail' ) )
+                                      .then( editor => {
+                                          console.log( editor );
+                                      } )
+                                      .catch( error => {
+                                          console.error( error );
+                                      } );
+                              </script>
+
                           </div>
                         <div class="form-group">
                             <label for="exampleInputFile">Image</label>
@@ -109,3 +120,15 @@
     </div>
 
 @endsection
+
+@section('foot')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    <script>
+        $(function () {
+            //Summernote
+            $('.textarea').summernote()
+        })
+    </script>
+@endsection
+})

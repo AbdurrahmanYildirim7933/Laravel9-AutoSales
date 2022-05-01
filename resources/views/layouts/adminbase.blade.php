@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{asset('assets')}}/admin/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('assets')}}/admin/images/favicon.png" />
+    @yield("head")
 </head>
 <body>
 <div class="container-scroller">
@@ -385,13 +386,13 @@
                 <!-- chat tab ends -->
             </div>
         </div>
-        @include('admin._sidebar')
+        @include("admin._sidebar")
         @yield('content')
 
     </div>
-
-    @include('admin._footer')
-    @yield('footer')
+    @include("admin._footer")
+    @yield('foot')
 
 </div>
-
+</body>
+</html>

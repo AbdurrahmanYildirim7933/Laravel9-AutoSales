@@ -3,7 +3,8 @@
 @section('title', 'Car List')
 
 @section('content')
-
+    <div id="scrollAuto"
+         style="overflow: auto; ; border-style:hidden; ">
     <div class="content-wrapper">
 
         <section class="content-header">
@@ -35,7 +36,6 @@
                         <th>Category</th>
                         <th>Title</th>
                         <th>Model</th>
-                        <th>Detail</th>
                         <th style="width: 400px">Image</th>
                         <th>Image Gallery</th>
                         <th>Price</th>
@@ -55,7 +55,6 @@
                         <td>{{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}</td>
                         <td>{{$rs->title}}</td>
                         <td>{{$rs->model}}</td>
-                        <td>{{$rs->detail}}</td>
                         <td>
                         @if($rs->image)
                           <img src="{{Storage::url($rs->image)}}" style="height: 100px; width:100px" >
@@ -84,6 +83,5 @@
         </div>
         </section>
     </div>
-
-
+    </div>
 @endsection
