@@ -76,7 +76,7 @@
                             </tr>
                             <tr>
                                 <th style="width: 50px">Detail Info</th>
-                                <td>{{!! $data->detail !!}}</td>
+                                <td>{!! $data->detail !!}</td>
                             </tr>
                             <tr>
                                 <th style="width: 50px">Image</th>

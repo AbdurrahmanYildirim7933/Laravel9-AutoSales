@@ -6,6 +6,10 @@
 @endsection
 @section('keywords','Ford,Volkswagen,Fiat')
 
+@section('slider')
+    @include('home._slider')
+@endsection
+
 @section('content')
     <!--tabs section-->
     <div class="page-section" style="padding-top:70px; padding-bottom:65px;">
@@ -33,7 +37,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img1.jpg" alt="#"/>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img1.jpg" alt="#"/>
                                                             <figcaption> <span class="auto-featured">Featured</span> </figcaption>
                                                         </figure>
                                                     </div>
@@ -64,7 +68,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -93,7 +97,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -122,7 +126,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -139,7 +143,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -156,7 +160,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -173,7 +177,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -190,7 +194,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -211,7 +215,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -240,7 +244,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -269,7 +273,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -298,7 +302,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -315,7 +319,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -332,7 +336,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -349,7 +353,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -366,7 +370,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -387,7 +391,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -416,7 +420,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -445,7 +449,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -474,7 +478,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -491,7 +495,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -508,7 +512,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -525,7 +529,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -542,7 +546,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -563,7 +567,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img1.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -592,7 +596,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img2.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -621,7 +625,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img3.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -650,7 +654,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img4.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -667,7 +671,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img5.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -684,7 +688,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img6.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -701,7 +705,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img7.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -718,7 +722,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
-                                                        <figure> <img src="assets/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
+                                                        <figure> <img src="{{asset('assets')}}/extra-images/listing-Grid-img8.jpg" alt="#"/></figure>
                                                     </div>
                                                     <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
                                                         <div class="post-title">
@@ -750,7 +754,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="cs-ad" style="text-align:center; padding:55px 0 25px;">
                         <div class="cs-media">
-                            <figure> <a href="#"><img alt="" src="assets/extra-images/cs-ad-img.jpg"></a> </figure>
+                            <figure> <a href="#"><img alt="" src="{{asset('assets')}}/extra-images/cs-ad-img.jpg"></a> </figure>
                         </div>
                     </div>
                 </div>

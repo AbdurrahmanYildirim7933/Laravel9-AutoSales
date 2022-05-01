@@ -3,7 +3,7 @@
 
 use App\Http\Controllers\AdminPanel\AdminCarController;
 use App\Http\Controllers\AdminPanel\ImageController;
-use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
@@ -25,13 +25,15 @@ Route::get('/eskilaravel', function () {
 });
 Route::redirect('/anasayfa', '/home')->name('anasayfa');;
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');;
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');;
-// Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id', '[0-9]+','name'=>'[A-Za-z]+']);;
+
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');;
 
-Route::get('/', function () {
-    return view('home.index ');
+Route::get('/home', function () {
+    return view('home.index');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

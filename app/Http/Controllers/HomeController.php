@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Car;
 use Illuminate\Http\Request;
 
-class Homecontroller extends Controller
+class HomeController extends Controller
 {
     //
     public function index(){
-        echo "Home Controller is Okey Maaan";
-        return view('home.index');
+        $sliderdata = Car :: limit(6)->get();
+        return view('home.index',['sliderdata' => $sliderdata]);
     }
+
     public function aboutus(){
         return view('home.about');
     }
+
     public function test($id,$name)
     {
         $data['$id']=$id;
