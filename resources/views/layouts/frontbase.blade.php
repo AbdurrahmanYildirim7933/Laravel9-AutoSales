@@ -43,10 +43,10 @@
 <!-- Main Start -->
 <div class="main-section">
 
-   @include('home._slider')
+    @include('home._slider')
     @include('home._mainbannerform')
     @include('home._category')
-
+    @include('home._slider2')
 
     @section('content')
         içerik alanı

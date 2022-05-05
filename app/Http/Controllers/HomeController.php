@@ -10,8 +10,12 @@ class HomeController extends Controller
 {
     //
     public function index(){
-        $sliderdata = Car :: limit(6)->get();
-        return view('home.index',['sliderdata' => $sliderdata]);
+        $sliderdata = Car :: limit(4)->get();
+        $carlist1 = Car :: limit(6)->get();
+        return view('home.index',[
+            'sliderdata' => $sliderdata,
+            'carlist1' => $carlist1
+        ]);
     }
 
     public function aboutus(){

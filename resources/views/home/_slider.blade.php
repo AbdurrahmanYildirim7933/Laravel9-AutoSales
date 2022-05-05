@@ -9,7 +9,7 @@
                         <div class="cs-auto-listing cs-auto-box">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="cs-element-title">
-                                    <h2>Latest Released Car Models</h2>
+                                    <h2></h2>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -17,7 +17,7 @@
                                     @foreach($sliderdata as $rs)
                                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-                                        <div class="cs-media"> <span class="featured"></span>
+                                        <div class="cs-media"> <span class=""></span>
                                             <figure> <a href="#"> <img src="{{Storage::url($rs->image)}}" style="width=400px; height: 400px" alt=""/> </a>
                                                 <figcaption> </figcaption>
                                             </figure>
@@ -25,9 +25,7 @@
                                                     <h2>{{$rs->title}}</h2>
                                                 </a> </div>
                                         </div>
-
-                                        <div class="auto-text cs-bgcolor"> <span>$28,000</span><small>MSRP $35,000</small> <a href="#" class="cs-button pull-right"><i class="icon-arrow_forward
-"></i></a> </div>                      @endforeach
+                                        @endforeach
                                     </li>
 
 
