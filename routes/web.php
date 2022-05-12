@@ -19,22 +19,9 @@ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryControlle
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/eskilaravel', function () {
-    return view('welcome');
-});
-Route::redirect('/anasayfa', '/home')->name('anasayfa');;
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
-Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');;
-
-Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');;
-
-Route::get('/home', function () {
-    return view('home.index');
-});
+Route::get('/car/{id}', [HomeController::class, 'car'])->name('car');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -42,7 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 //******************************ADMIN PANEL ROUTES***************************************
 Route::prefix('admin')->name('admin.')->group(function () {
-Route::get('/', [AdminHomeController::class, 'index'])->name('index');;
+Route::get('/', [AdminHomeController::class, 'index'])->name('index');
 
 //******************************ADMIN CATEGORY ROUTES***************************************
     Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
@@ -68,7 +55,7 @@ Route::get('/', [AdminHomeController::class, 'index'])->name('index');;
     Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
         Route::get('/{cid}','index')->name('index');
         Route::post('/store/{cid}','store')->name('store');
-        Route::post('/update/{cid}/{id}','update')->name('update');
+        Route::get('/update/{cid}/{id}','update')->name('update');
         Route::get('/destroy/{cid}/{id}','destroy')->name('destroy');
     });
 });

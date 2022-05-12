@@ -17,16 +17,16 @@
                                 @foreach($carlist1 as $rs)
                                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-                                        <div class="cs-media"> <span>{{$rs->title}}</span>
-                                            <figure> <a href="#"> <img src="{{Storage::url($rs->image)}}" style="width=350px; height: 350px" alt=""/> </a>
+                                        <div class="cs-media"> <span style="background: #89919f">{{$rs->title}}</span>
+                                            <figure> <a href="{{route('car',['id'=>$rs->id])}}"> <img src="{{Storage::url($rs->image)}}" style="width:350px; height: 350px" alt=""/> </a>
                                                 <figcaption> </figcaption>
                                             </figure>
-                                            <div class="caption-text"> <a href="#">
+                                            <div class="caption-text"> <a href="{{route('car',['id'=>$rs->id])}}">
                                                     <h2>{{$rs->title}}</h2>
                                                 </a> </div>
                                         </div>
 
-                                        <div class="auto-text cs-bgcolor"> <span>{{$rs->price}}</span><small>{{$rs->price * 1.10}}</small> <a href="#" class="cs-button pull-right"><i class="icon-arrow_forward
+                                        <div class="auto-text cs-bgcolor"> <span>{{$rs->price}}</span><small>{{$rs->price * 1.10}}</small> <a href="{{route('car',['id'=>$rs->id])}}" class="cs-button pull-right"><i class="icon-arrow_forward
 "></i></a> </div>                      @endforeach
                                     </li>
 
