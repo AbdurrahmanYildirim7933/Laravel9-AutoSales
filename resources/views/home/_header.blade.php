@@ -10,9 +10,52 @@
                 </div>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                @php
+                    $mainCategories = \App\Http\Controllers\HomeController::maincategorylist()
+                @endphp
                 <div class="cs-main-nav pull-right">
                     <nav class="main-navigation">
                         <ul>
+
+                            <li><a href="#">Category</a>
+
+                                <ul class="list-links">
+                                        @foreach($mainCategories as $rs)
+
+
+                                            @if(count($rs->children))
+
+                                            <li class="menu-item-has-children"><a href="#">{{$rs->title}}</a>
+                                                <ul>
+                                                @include('home.categorytree',['children'=>$rs->children])
+                                                </ul>
+                                            </li>
+                                            @else
+                                                <li><a href="#">{{$rs->title}}</a></li>
+                                            @endif
+
+                                        @endforeach
+
+                                </ul>
+                            </li>
+
+                            <!--<li><a href="#">Category</a>
+                                <ul>
+                                    <li><a href="blog-listing-large.html">Large View</a></li>
+                                    <li><a href="blog-listing-medium.html">Medium View</a></li>
+                                    <li><a href="blog-listing-grid.html">Grid View</a></li>
+                                    <li class="menu-item-has-children"><a href="#">Detail View</a>
+                                        <ul>
+                                            <li><a href="blog-detail-sound.html">With Audio</a></li>
+                                            <li><a href="blog-detail-video.html">With Video</a></li>
+                                            <li><a href="blog-detail-sound.html">With Soundcloud</a></li>
+                                            <li><a href="blog-detail-slider.html">With Slider</a></li>
+                                            <li><a href="blog-detail-post.html">Featured Image</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>--!>
+
                             <li><a href="index-2.html">Home</a></li>
                             <li><a href="about-us.html">About Us</a></li>
                             <li><a href="#">Inventory</a>
@@ -48,22 +91,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="#">News</a>
-                                <ul>
-                                    <li><a href="blog-listing-large.html">Large View</a></li>
-                                    <li><a href="blog-listing-medium.html">Medium View</a></li>
-                                    <li><a href="blog-listing-grid.html">Grid View</a></li>
-                                    <li class="menu-item-has-children"><a href="#">Detail View</a>
-                                        <ul>
-                                            <li><a href="blog-detail-sound.html">With Audio</a></li>
-                                            <li><a href="blog-detail-video.html">With Video</a></li>
-                                            <li><a href="blog-detail-sound.html">With Soundcloud</a></li>
-                                            <li><a href="blog-detail-slider.html">With Slider</a></li>
-                                            <li><a href="blog-detail-post.html">Featured Image</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+
                             <li><a href="#">Shop</a>
                                 <ul>
                                     <li><a href="shop-listing.html">Products</a></li>
@@ -425,7 +453,7 @@
                         </div>
                         <div class="cs-wish-list"><a href="#"><i class=" icon-heart4"></i><span>0</span></a>
                         <div class="wish-list-dropdown">
-                            <strong>Post a new Ad</strong>
+                            <strong></strong>
                             <ul>
                                 <li class="alert alert-dismissible  fade in" role="alert">
 
@@ -501,7 +529,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a class="btn-view-all" href="#">View All</a>
+                            <a class="btn-view-all" href="#"> </a>
                         </div>
                     </div>-->
                     </div>

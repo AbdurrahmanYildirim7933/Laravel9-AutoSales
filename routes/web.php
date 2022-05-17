@@ -1,6 +1,5 @@
 <?php
 
-
 use App\Http\Controllers\AdminPanel\AdminCarController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\HomeController;
@@ -22,6 +21,8 @@ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryControlle
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/car/{id}', [HomeController::class, 'car'])->name('car');
+
+Route::get('/categorycars/{id}/{slug}', [HomeController::class, 'categorycars'])->name('categorycars');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

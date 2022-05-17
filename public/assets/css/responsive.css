@@ -14,7 +14,7 @@
 .single-page .auto-overview ul li .cs-media{ margin-right:10px;}
 .blog-listing.medium-view .post-detail span.post-date {margin-right: 9px;}
 .site-main ul.products li.product {width: 28.555%;}
-.woocommerce.single-product div.product div.images div.thumbnails a img{ width:75px;}
+.woocommerce.single-product div.product div.images div.thumbnails a img{ width:100%; height: auto}
 .wp-automobile .catagory-section .cs-element-title{ padding-top:25px;}
 .wp-automobile .catagory-section{ padding-bottom:50px;}
 .cs-search-result .cs-seggetions .cs-form .input-holder input[type="text"]{width: 82%;}

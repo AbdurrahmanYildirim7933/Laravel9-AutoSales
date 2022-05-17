@@ -22,10 +22,11 @@
                                         <div class="images">
                                             <div class="blog-listing medium-view">
                                                 <div class="cs-media blog-medium-slider">
-                                                    @foreach($images as $rs)
-                                                    <figure><img src="{{Storage::url($data->image)}}" alt="" /></figure>
+                                                    <figure><img style="width: 100%; height: 300px" src="{{Storage::url($data->image)}}" alt="" /></figure>
+
+                                                @foreach($images as $rs)
                                                         <div class="thumbnails columns-4">
-                                                            <a href="#"><img src="{{Storage::url($rs->image )}} style="width="350px; height= 350px" alt="shop" /></a>
+                                                            <a href="#"><img style="width: 100%; height: 300px" src="{{Storage::url($rs->image )}}" alt="shop" /></a>
 
                                                         </div>
                                                         @endforeach

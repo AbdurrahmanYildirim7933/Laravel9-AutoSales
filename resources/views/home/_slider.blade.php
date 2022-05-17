@@ -3,11 +3,12 @@
         @foreach($sliderdata as $rs)
         <li>
             <div class="cs-blog-banner">
-                <a href="{{route('car',['id'=>$rs->id])}}"> <img src="{{Storage::url($rs->image)}}" style="width=900px; height: 900px" alt=""/> </a>
+                <a href="{{route('car',['id'=>$rs->id])}}"> <img src="{{Storage::url($rs->image)}}" style="width=900px; height: 800px" alt=""/> </a>
                 <div class="caption-text">
-                    <a href="{{route('car',['id'=>$rs->id])}}"> <h2>{{$rs->title}}</h2> </a>
-                  </div>
+                    <a href="{{route('car',['id'=>$rs->id])}}">  </a>
+                </div>
             </div>
+            <h1>{{$rs->title}}</h1>
             @endforeach
         </li>
     </ul>

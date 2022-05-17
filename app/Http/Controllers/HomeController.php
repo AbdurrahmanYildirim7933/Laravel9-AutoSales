@@ -4,17 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Car;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     //
+    public static function maincategorylist()
+    {
+        return Category::where('parent_id','=',0)->with('children')->get();
+    }
+
     public function index()
     {
+        $page='home';
         $sliderdata = Car :: limit(4)->get();
         $carlist1 = Car :: limit(6)->get();
         return view('home.index',[
+            'page' => $page,
             'sliderdata' => $sliderdata,
             'carlist1' => $carlist1
         ]);
@@ -22,6 +30,23 @@ class HomeController extends Controller
 
     public function car ($id)
     {
+        $sliderdata = Car :: limit(4)->get();
+        $images = DB::table('images')->where('car_id', $id)->get();
+        $data = Car :: find($id);
+        $carlist1 = Car :: limit(6)->get();
+        return view('home.car',[
+            'data' => $data,
+            'images' => $images,
+            'carlist1' => $carlist1,
+            'sliderdata' => $sliderdata,
+
+        ]);
+
+    }
+    public function categorycars ($id)
+    {
+        echo "Category Cars";
+        exit();
         $sliderdata = Car :: limit(4)->get();
         $images = DB::table('images')->where('car_id', $id)->get();
         $data = Car :: find($id);
