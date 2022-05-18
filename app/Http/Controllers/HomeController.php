@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function car ($id)
     {
-        $sliderdata = Car :: limit(4)->get();
+        $sliderdata = Category :: limit(4)->get();
         $images = DB::table('images')->where('car_id', $id)->get();
         $data = Car :: find($id);
         $carlist1 = Car :: limit(6)->get();
@@ -45,17 +45,14 @@ class HomeController extends Controller
     }
     public function categorycars ($id)
     {
-        echo "Category Cars";
-        exit();
-        $sliderdata = Car :: limit(4)->get();
-        $images = DB::table('images')->where('car_id', $id)->get();
-        $data = Car :: find($id);
-        $carlist1 = Car :: limit(6)->get();
-        return view('home.car',[
-            'data' => $data,
-            'images' => $images,
-            'carlist1' => $carlist1,
-            'sliderdata' => $sliderdata,
+
+        $category= Car :: find($id);
+        $cars = DB::table('cars')->where('category_id', $id)->get();
+
+
+        return view('home.categorycars',[
+            'category' => $category,
+            'cars' => $cars,
 
         ]);
 
