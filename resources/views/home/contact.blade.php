@@ -1,4 +1,4 @@
-@extends('layouts.frontbase_2')
+@extends('layouts.frontbase_3')
 
 @section('title','Contact '. $setting->title)
 @section('description',$setting->description)
@@ -96,44 +96,58 @@
                                             introduce you <br/>to your second mind, the hidden and mysterious subconscious.</p>
                                     </div>
                                 </div>
-                                <form>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <form id="checkout-form" action="{{route("storemessage")}}" class="clearfix" method="post">
+                                    @csrf
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                        <div class="section-title">
+                                            <h3 class="title">Contact Form</h3>
+                                            <hr>
+                                        </div>
+                                        @include('home.messages')
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="cs-form-holder">
-                                                    <div class="input-holder"><input type="text" placeholder="Full Name"><i class=" icon-user"></i></div>
+                                                    <div class="input-holder"><input type="text" name="name" placeholder="Full Name"><i class=" icon-user"></i></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="cs-form-holder">
-                                                    <div class="input-holder"><input type="text" placeholder="Email Address"><i class=" icon-envelope"></i></div>
+                                                    <div class="input-holder"><input type="tel" name="phone" placeholder="Phone Number"><i class="icon-mobile2"></i></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="cs-form-holder">
-                                                    <div class="input-holder"><input type="text" placeholder="Phone Number"><i class="icon-mobile2"></i></div>
+                                                    <div class="input-holder"><input type="email" name="email" placeholder="Email Address"><i class=" icon-envelope"></i></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="cs-form-holder">
-                                                    <div class="input-holder" id="data-toggle">
-                                                        <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Subscribe and Get latest updates and offers by Email</label>
-                                                    </div>
+                                                    <div class="input-holder"><input type="text" name="subject" placeholder="Subject"><i class=" icon-envelope"></i></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="cs-form-holder">
+                                                    <div class="input-holder"><textarea type="text" name="message" placeholder="Your Message..."></textarea></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="cs-btn-submit cs-color">
+                                                    <input type="submit" value="Send Message">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="section-title">
+                                            <h3 class="title">Contact Information</h3>
+                                            <hr>
+                                        </div>
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="shiping-methods">
                                                     <div class="input-checkbox">{!! $setting->contact !!}</div>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="cs-btn-submit cs-color">
-                                                    <input type="submit" value="Contact Dealer">
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </form>

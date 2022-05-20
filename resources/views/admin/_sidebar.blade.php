@@ -56,7 +56,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/admin/messages" class="nav-link" ><i class="fas fa-envelope menu-icon"></i>
+            <a href="{{route('admin.message.index')}}" class="nav-link" ><i class="fas fa-envelope menu-icon"></i>
                 <span class="menu-title">Messages</span>
             </a>
         </li>
