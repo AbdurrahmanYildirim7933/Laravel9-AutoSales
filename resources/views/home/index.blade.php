@@ -1,10 +1,9 @@
 @extends('layouts.frontbase')
 
-@section('title', 'Laravel Car Sale')
-@section('description')
-    TR'nin en güvenilir araç satış sitesi
-@endsection
-@section('keywords','Ford,Volkswagen,Fiat')
+@section('title', $setting->title)
+@section('description',$setting->description)
+@section('keywords',$setting->keywords)
+@section('icon',Storage::url($setting->icon))
 
 @section('slider')
     @include('home._slider')
