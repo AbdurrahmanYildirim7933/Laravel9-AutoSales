@@ -59,13 +59,8 @@
                             <li><a href="{{route('home')}}">Home</a></li>
                             <li><a href="{{route('about')}}">About Us</a></li>
                             <li><a href="{{route('references')}}">References</a></li>
+                            <li><a href="{{route('faq')}}">FAQ</a></li>
                             <li><a href="{{route('contact')}}">Contact</a></li>
-                            <li><a href="#">Dealers</a>
-                                <ul>
-                                    <li><a href="agent-listing.html">List View</a></li>
-                                    <li><a href="agent-detail.html">Detail Page</a></li>
-                                </ul>
-                            </li>
                             <li><a href="#">pages</a>
                                 <ul>
                                     <li><a href="services.html">Our Services</a></li>

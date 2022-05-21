@@ -36,6 +36,7 @@
                                             </div>
                                         </div>
                                         <div class="summary entry-summary">
+                                            @include('home.messages')
                                             <div class="star-rating" title="Rated 5 out of 5">
                                                 <span style="width:66%"><strong class="rating">5</strong> out of 5</span>
                                             </div>
@@ -115,49 +116,37 @@
                                                 <div role="tabpanel" class="tab-pane fade" id="messages">
                                                     <div id="reviews">
                                                         <div id="comments">
-                                                            <h5>Product Reviews</h5>
+                                                            <h5>Car Reviews</h5>
                                                             <ol class="commentlist">
+                                                                @foreach($reviews as $rs)
                                                                 <li class="comment even thread-even depth-1">
                                                                     <div class="comment_container">
                                                                         <img src="{{asset('assets')}}/extra-images/Shop-comment1.jpg" alt="#" />
                                                                         <div class="comment-text">
                                                                             <p class="meta">
-                                                                                <em>James Warson</em>
-                                                                                September 6, 2015, 05:32PM
+                                                                                <em>{{$rs->user->name}}</em>
+                                                                                {{$rs->created_at}}
                                                                             </p>
                                                                             <div class="star-rating">
-                                                                                <span style="width:60%"><strong itemprop="ratingValue">3</strong> out of 5</span>
+                                                                                <span style="width=(widthratio{{$rs->rate}}*20)% "><strong itemprop="ratingValue">{{$rs->rate}}</strong> {{$rs->rate}}</span>
                                                                             </div>
                                                                             <div class="description">
-                                                                                <p> Sed id magna tellus. Ut eget dictum magna. Proin pharetra, elit nec accumsan posuere, massa tellus lobortis mi, a viverra nisi metus et risus. Praesent efficitur neque nibh, non maximus ante suscipit non.</p>
+                                                                                <strong>{{$rs->subject}}</strong>
+                                                                                <p> {{$rs->review}}</p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="comment even thread-even depth-1">
-                                                                    <div class="comment_container">
-                                                                        <img src="{{asset('assets')}}/extra-images/Shop-comment2.jpg" alt="#" />
-                                                                        <div class="comment-text">
-                                                                            <p class="meta">
-                                                                                <em>Brian Adamas</em>
-                                                                                September 6, 2015, 05:32PM
-                                                                            </p>
-                                                                            <div class="star-rating">
-                                                                                <span style="width:60%"><strong itemprop="ratingValue">3</strong> out of 5</span>
-                                                                            </div>
-                                                                            <div class="description">
-                                                                                <p> Sed id magna tellus. Ut eget dictum magna. Proin pharetra, elit nec accumsan posuere, massa tellus lobortis mi, a viverra nisi metus et risus. Praesent efficitur neque nibh, non maximus ante suscipit non.</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
+                                                                @endforeach
                                                             </ol>
                                                         </div>
                                                         <div id="review_form_wrapper">
                                                             <div id="review_form">
                                                                 <div class="comment-respond" id="respond">
-                                                                    <h5 class="comment-reply-title" id="reply-title">Add a Review  <small><a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h5>				<form novalidate class="comment-form" id="commentform" method="post" action="http://motors.stylemixthemes.com/wp-comments-post.php">
-                                                                        <p class="comment-form-rating"><p class="stars"><span><a href="#" class="star-1">1</a><a href="#" class="star-2">2</a><a href="#" class="star-3">3</a><a href="#" class="star-4">4</a><a href="#" class="star-5">5</a></span></p><select id="rating" name="rating" style="display: none;" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                                                                    <h5 class="comment-reply-title" id="reply-title">Add a Review  <small><a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h5>
+                                                                    <form class="comment-form" id="commentform" method="post" action="{{route('storecomment')}}">
+                                                                        @csrf
+                                                                        <p class="comment-form-rating"><p class="stars"><span><a class="star-1">1</a><a href="#" class="star-2">2</a><a href="#" class="star-3">3</a><a href="#" class="star-4">4</a><a href="#" class="star-5">5</a></span></p><select id="rate" name="rate" style="display: none;" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
                                                                             <option value="">Rate…</option>
                                                                             <option value="5">Perfect</option>
                                                                             <option value="4">Good</option>
@@ -171,36 +160,41 @@
                                 <span class="select2-selection__rendered" id="select2-rating-container" title="Rate…">Give Rating</span>
                                 <span role="presentation" class="select2-selection__arrow"><b role="presentation"></b></span></span>
                                 </span><span aria-hidden="true" class="dropdown-wrapper"></span></span></p>
+                                                                        <div class="rating">
+
+                                                                            <input type="radio" name="rate" value="5" id="5"><label for="5">5-☆</label>
+                                                                            <input type="radio" name="rate" value="4" id="4"><label for="4">4-☆</label>
+                                                                            <input type="radio" name="rate" value="3" id="3"><label for="3">3-☆</label>
+                                                                            <input type="radio" name="rate" value="2" id="2"><label for="2">2-☆</label>
+                                                                            <input type="radio" name="rate" value="1" id="1"><label for="1">1-☆</label>
+
+                                                                        </div>
                                                                         <div class="row">
+                                                                            <input class="input" type="hidden" name="car_id" value="{{$data->id}}" />
+
                                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                                 <p class="comment-form-author">
-                                                                                    <input type="text" placeholder="Name" />
+                                                                                    <input type="text" name="subject" placeholder="Subject" />
                                                                                 </p>
                                                                             </div>
-                                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                                                <p class="comment-form-author">
-                                                                                    <input type="text" placeholder="Phone Number" />
-                                                                                </p>
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                                                <p class="comment-form-author">
-                                                                                    <input type="text" placeholder="Subject" />
-                                                                                </p>
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                                                <p class="comment-form-email">
-                                                                                    <input type="text" placeholder="Email Address">
-                                                                                </p>
-                                                                            </div>
+
                                                                         </div>
                                                                         <p class="comment-form-comment">
-                                                                            <textarea placeholder="Your Review"></textarea>
+                                                                            <textarea name="review" placeholder="Your Review"></textarea>
                                                                         </p>
+                                                                        @auth
                                                                         <p class="form-submit">
                                                                             <input type="submit" value="Submit Message" class="submit cs-bgcolor">
                                                                             <input type="hidden" />
                                                                             <input type="hidden" />
                                                                         </p>
+                                                                        @else
+                                                                            <p class="form-submit">
+                                                                                <input type="submit" value="For Submit Your Review, Please Login" class="submit cs-bgcolor">
+                                                                                <input type="hidden" />
+                                                                                <input type="hidden" />
+                                                                            </p>
+                                                                        @endauth
                                                                         <p style="display: none;">
                                                                             <input type="hidden" />
                                                                         </p>
@@ -218,7 +212,7 @@
                                         </div>
                                         <div class="columns-3">
                                             <div class="shop-sec-title">
-                                                <h3>Related Products</h3>
+                                                <h3>Related Cars</h3>
                                             </div>
                                             <ul class="products">
                                                 <li class="product">
@@ -283,7 +277,7 @@
                             </div>
                             <aside class="page-sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                 <div class="widget woocommerce widget_product_categories">
-                                    <h6>Product Categories</h6>
+                                    <h6>Car Categories</h6>
                                     <ul>
                                         <li class="cat-item cat-item-3 cat-parent">
                                             <a href="#">Clothes &amp; Footwear <span>(17)</span></a>
@@ -297,7 +291,7 @@
                                     </ul>
                                 </div>
                                 <div class="widget woocommerce widget_top_rated_products">
-                                    <h6>latest Products</h6>
+                                    <h6>Latest Cars</h6>
                                     <ul class="product_list_widget">
                                         <li>
                                             <a href="#">
@@ -323,7 +317,7 @@
                                     </ul>
                                 </div>
                                 <div class="widget woocommerce widget_shopping_cart">
-                                    <h6>Top Rated Products</h6>
+                                    <h6>Top Rated Cars</h6>
                                     <div class="widget_shopping_cart_content">
                                         <ul class="cart_list product_list_widget">
                                             <li class="mini_cart_item">
@@ -360,7 +354,7 @@
                                     </div>
                                 </div>
                                 <div class="widget widget-tags woocommerce">
-                                    <h6>PRODUCTS TAG</h6>
+                                    <h6>CARS TAG</h6>
                                     <a href="#">Houses</a>
                                     <a href="#">Apartment</a>
                                     <a href="#">Rates</a>

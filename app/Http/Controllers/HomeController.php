@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Car;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -85,11 +87,27 @@ class HomeController extends Controller
         return redirect()->route('contact')->with('info','Your message has been sent, Thank you.');
     }
 
+    public function storecomment(Request $request)
+    {
+        //dd($request);
+        $data = new Comment();
+        $data->user_id = Auth::id();
+        $data->car_id = $request->input('car_id');
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->rate = $request->input('rate');
+        $data->ip = $request->ip();
+        $data->save();
+
+        return redirect()->route('car',['id'=>$request->input('car_id')])->with('info','Your comment has been sent, Thank you.');
+    }
+
 
     public function car ($id)
     {
         $sliderdata = Category :: limit(4)->get();
         $images = DB::table('images')->where('car_id', $id)->get();
+        $reviews= Comment::where('car_id',$id)->get();
         $data = Car :: find($id);
         $carlist1 = Car :: limit(6)->get();
         return view('home.car',[
@@ -97,6 +115,7 @@ class HomeController extends Controller
             'images' => $images,
             'carlist1' => $carlist1,
             'sliderdata' => $sliderdata,
+            'reviews' => $reviews
 
         ]);
 

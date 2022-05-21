@@ -58,4 +58,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    #One To Many
+    public function reviews(){
+
+        return $this->hasMany(Comment::Class);
+    }
 }
