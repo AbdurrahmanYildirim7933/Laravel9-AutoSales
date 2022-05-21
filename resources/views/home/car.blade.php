@@ -37,10 +37,15 @@
                                         </div>
                                         <div class="summary entry-summary">
                                             @include('home.messages')
+
+                                            @php
+                                                $average = $data->comment->average('rate');
+                                            @endphp
+
                                             <div class="star-rating" title="Rated 5 out of 5">
-                                                <span style="width:66%"><strong class="rating">5</strong> out of 5</span>
+                                                <span style="width: ({{$average}}*20) %"><strong class="rating">5</strong> out of 6</span>
                                             </div>
-                                            <em>(1 customer review)</em>
+                                            <em>{{number_format($average,1)}} / ({{$data->comment->count('id')}} customer review)</em>
                                             <span class="stock_wrapper">Availability: <span class="stock cs-color">In stock</span></span>
                                             <h3>{{$data->title}}</h3>
                                             <span class="price">
@@ -143,7 +148,7 @@
                                                         <div id="review_form_wrapper">
                                                             <div id="review_form">
                                                                 <div class="comment-respond" id="respond">
-                                                                    <h5 class="comment-reply-title" id="reply-title">Add a Review  <small><a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h5>
+                                                                    <h5 class="comment-reply-title" id="reply-title">{{$data->comment->count('id')}} Reviews / Add a Review  <small><a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a></small></h5>
                                                                     <form class="comment-form" id="commentform" method="post" action="{{route('storecomment')}}">
                                                                         @csrf
                                                                         <p class="comment-form-rating"><p class="stars"><span><a class="star-1">1</a><a href="#" class="star-2">2</a><a href="#" class="star-3">3</a><a href="#" class="star-4">4</a><a href="#" class="star-5">5</a></span></p><select id="rate" name="rate" style="display: none;" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">

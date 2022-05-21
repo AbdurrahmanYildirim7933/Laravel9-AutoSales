@@ -25,9 +25,16 @@
                                                     <h2>{{$rs->title}}</h2>
                                                 </a> </div>
                                         </div>
+                                        @php
+                                            $average = $rs->comment->average('rate');
+                                        @endphp
+                                        <div class="auto-text cs-bgcolor"> <span>${{$rs->price}}</span><del>${{$rs->price * 1.10}}  </del><small>
+                                                <em>{{number_format($average,1)}} / ({{$rs->comment->count('id')}} customer review)</em>
+                                            </small>
+                                            <a href="{{route('car',['id'=>$rs->id])}}" class="cs-button pull-right"><i class="icon-arrow_forward"></i></a>
 
-                                        <div class="auto-text cs-bgcolor"> <span>{{$rs->price}}</span><small>{{$rs->price * 1.10}}</small> <a href="{{route('car',['id'=>$rs->id])}}" class="cs-button pull-right"><i class="icon-arrow_forward
-"></i></a> </div>                      @endforeach
+                                        </div>
+                                        @endforeach
                                     </li>
 
 
