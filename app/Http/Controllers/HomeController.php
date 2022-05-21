@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Car;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -51,10 +52,21 @@ class HomeController extends Controller
 
     public function contact()
     {
-
         $setting = Setting::first();
         return view('home.contact',[
             'setting' => $setting,
+
+        ]);
+    }
+
+    public function faq()
+    {
+
+        $setting = Setting::first();
+        $datalist= Faq::all();
+        return view('home.faq',[
+            'setting' => $setting,
+            'datalist' => $datalist
         ]);
     }
 

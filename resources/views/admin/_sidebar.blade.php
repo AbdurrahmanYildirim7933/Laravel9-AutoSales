@@ -51,7 +51,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/admin/faq" class="nav-link" ><i class="nav-icon fas fa-question menu-icon"></i>
+            <a href="{{route('admin.faq.index')}}" class="nav-link" ><i class="nav-icon fas fa-question menu-icon"></i>
                 <span class="menu-title">FAQ</span>
             </a>
         </li>
