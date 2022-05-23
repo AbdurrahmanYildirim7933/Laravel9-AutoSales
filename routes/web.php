@@ -30,6 +30,10 @@ Route::post('/storemessage', [HomeController::class, 'storemessage'])->name('sto
 Route::post('/storecomment', [HomeController::class, 'storecomment'])->name('storecomment');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
+Route::view('/loginuser', 'home.login');
+Route::view('/registeruser', 'home.register');
+Route::get('/logoutuser', [HomeController::class, 'logout'])->name('logoutuser');
+
 Route::get('/car/{id}', [HomeController::class, 'car'])->name('car');
 
 Route::get('/categorycars/{id}/{slug}', [HomeController::class, 'categorycars'])->name('categorycars');

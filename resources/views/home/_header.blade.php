@@ -2,14 +2,17 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                 <div class="cs-logo">
                     <div class="cs-media">
                         <figure><a href="{{route('home')}}"><img src="{{asset('assets')}}/images/cs-logo.png" alt="" /></a></figure>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        </div>
+        <div class="row">
+
+            <div class="col-lg-16 col-md-16 col-sm-16 col-xs-16">
                 @php
                     $mainCategories = \App\Http\Controllers\HomeController::maincategorylist()
                 @endphp
@@ -86,8 +89,11 @@
                                 </ul>
                             </li>
                             <li class="cs-user-option">
+
                                 <div class="cs-login">
-                                    <div class="cs-login-dropdown"> <a href="#"><i class="icon-user2"></i> Kaiser <i class="icon-chevron-down2"></i></a>
+                                    @auth
+                                    <div class="cs-login-dropdown"> <a href="#"><i class="icon-user2"></i> {{Auth::user()->name}} <i class="icon-chevron-down2"></i></a>
+
                                         <div class="cs-user-dropdown"> <strong>Post a new Ad</strong>
                                             <ul>
                                                 <li><a href="user-genral-setting.html">General Setting<span class="cs-bgcolor">3</span></a></li>
@@ -97,7 +103,11 @@
                                                 <li><a href="user-payments.html">Payment</a></li>
                                                 <li><a href="user-packages.html">Packages</a></li>
                                             </ul>
-                                            <a class="btn-sign-out" href="#">Logout</a> </div>
+
+                                            <a class="btn-sign-out" href="/logoutuser">Logout</a>
+
+                                        </div>
+
                                     </div>
                                     <a class="cs-bgcolor btn-form" data-toggle="modal" href="http://chimpgroup.com/themeforest/automobile/remote.html" data-target="#user-sign-up" aria-hidden="true"><i class="icon-plus"></i> Sell Car</a>
                                     <!-- Modal -->
@@ -219,6 +229,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!--<div class="cs-wish-list"><a href="#"><i class=" icon-heart4"></i><span>0</span></a>
                                     <div class="wish-list-dropdown">
                                         <strong>Post a new Ad</strong>
@@ -299,6 +310,10 @@
                                         <a class="btn-view-all" href="#">View All</a>
                                     </div>
                                 </div>-->
+                                @endauth
+                                @guest
+                                <a class="cs-bgcolor btn-form" href="/loginuser">Login</a> / <a class="cs-bgcolor btn-form" href="/registeruser"><i class="icon-plus"></i>Register</a>
+                                @endguest
                             </li>
                         </ul>
                     </nav>
