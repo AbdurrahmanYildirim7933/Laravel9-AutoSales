@@ -33,6 +33,8 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::view('/loginuser', 'home.login');
 Route::view('/registeruser', 'home.register');
 Route::get('/logoutuser', [HomeController::class, 'logout'])->name('logoutuser');
+Route::view('/loginadmin', 'admin.login');
+Route::post('/loginadmincheck', [HomeController::class, 'loginadmincheck'])->name('loginadmincheck');
 
 Route::get('/car/{id}', [HomeController::class, 'car'])->name('car');
 

@@ -87,6 +87,7 @@ class HomeController extends Controller
         return redirect()->route('contact')->with('info','Your message has been sent, Thank you.');
     }
 
+
     public function storecomment(Request $request)
     {
         //dd($request);
@@ -165,5 +166,29 @@ class HomeController extends Controller
         return redirect('/');
     }
 
+    /**
+     * Handle an authentication attempt.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function loginadmincheck(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/admin');
+        }
+
+        return back()->withErrors([
+            'error' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
+    }
 
 }

@@ -8,11 +8,11 @@
                 </div>
                 <div class="profile-name">
                     <p class="name">
-                        Welcome Back Yıldırım
+                        {{ Auth::user()->name }}
                     </p>
-                    <p class="designation">
-                        Develepor: Noghay
-                    </p>
+                    <a href="/logoutuser" class="designation">
+                        LOGOUT
+                    </a>
                 </div>
             </div>
         <li class="nav-item">
