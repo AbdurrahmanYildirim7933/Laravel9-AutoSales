@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
@@ -44,6 +45,15 @@ Route::get('/categorycars/{id}/{slug}', [HomeController::class, 'categorycars'])
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//******************************USER AUTH CONTROL***************************************
+Route::middleware('auth')->group(function () {
+
+//******************************USER ROUTES***************************************
+    Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function () {
+        Route::get('/','index')->name('index');
+
+    });
 
 //******************************ADMIN PANEL ROUTES***************************************
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
@@ -116,4 +126,5 @@ Route::get('/', [AdminHomeController::class, 'index'])->name('index');
         Route::post('/addrole/{id}','addrole')->name('addrole');
         Route::get('/destroyrole/{uid}/{rid}','destroyrole')->name('destroyrole');
     });
+  });
 });
