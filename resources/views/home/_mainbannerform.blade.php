@@ -1,5 +1,19 @@
+<div class="page-section" style="background: url(assets/extra-images/full-section-img.jpg)no-repeat; background-size:cover; padding:206px 0 80px; text-shadow: 3px 4px 6px rgba(0,0,0,.37);margin-top:-30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="cs-column-text">
+                    <h1 style="color:#fff !important; font-size:50px !important; line-height:53px !important; text-shadow: 3px 4px 6px rgba(0,0,0,.37);">AUTO-SALES BEST CARS</h1>
+                    <a href="#" class="cs-button" style="color:#fff;width:80px; height:80px; border-radius:50%; line-height:17px; text-align:center; padding-top:40px; letter-spacing:1px; font-weight:bold; vertical-align:middle; text-shadow: 3px 4px 6px rgba(0,0,0,.37); ">Starts From</a> <strong style=" vertical-align:middle; font-size:50px; color:#fff; text-shadow: 3px 4px 6px rgba(0,0,0,.37);"><em style="font-style:normal; font-size:30px; vertical-align:top; line-height:0;">$</em>55,897</strong> </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--Main Banner form-->
-<div class="page-section" style="background: rgba(36, 41, 49, 1); padding-top:33px;-webkit-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);-moz-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);box-shadow: 0 0 5px rgba(0,0,0,.4), inset 0px 2px rgba(255,255,255,.3);border: solid 1px #242931;margin-bottom:110px;">
+<div class="page-section" style="background: rgba(36, 41, 49, 1); padding-top:0px;-webkit-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);-moz-box-shadow: 0 0 5px rgba(0,0,0,.4), inset 1px 2px rgba(255,255,255,.3);box-shadow: 0 0 5px rgba(0,0,0,.4), inset 0px 2px rgba(255,255,255,.3);border: solid 1px #242931;margin-bottom:0px;">
     <div class="container">
         <div class="row">
             <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -12,6 +26,7 @@
                                     <input type="text" placeholder="Search by Keyword" />
                                 </div>
                             </div>
+
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
                                 <div class="select-dropdown">
                                     <select class="chosen-select">

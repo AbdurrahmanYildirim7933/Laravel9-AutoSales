@@ -106,7 +106,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="{{route('admin.message.index')}}" data-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-envelope mx-0"></i>
                     <span class="count">25</span>
                 </a>
@@ -165,13 +165,13 @@
                     <img src="{{asset('assets')}}/admin/images/faces/face5.jpg" alt="profile"/>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
+                    <a class="dropdown-item" href="">
                         <i class="fas fa-cog text-primary"></i>
                         Settings
                     </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">
-                        <i class="fas fa-power-off text-primary"></i>
+                    <div class="dropdown-divider" href="/logoutuser"></div>
+                    <a class="dropdown-item" href="/logoutuser">
+                        <i class="fas fa-power-off text-primary" href="/logoutuser"></i>
                         Logout
                     </a>
                 </div>

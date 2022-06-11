@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
+use App\Http\Controllers\AdminPanel\BrandController as AdminBrandController ;
 
 
 /*
@@ -41,6 +42,7 @@ Route::post('/loginadmincheck', [HomeController::class, 'loginadmincheck'])->nam
 Route::get('/car/{id}', [HomeController::class, 'car'])->name('car');
 
 Route::get('/categorycars/{id}/{slug}', [HomeController::class, 'categorycars'])->name('categorycars');
+Route::get('/brandcars/{id}', [HomeController::class, 'brandcars'])->name('brandcars');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -54,6 +56,16 @@ Route::middleware('auth')->group(function () {
         Route::get('/','index')->name('index');
         Route::get('/reviews','reviews')->name('reviews');
         Route::get('/reviewdestroy/{id}','reviewdestroy')->name('reviewdestroy');
+        Route::get('/createcar','createcar')->name('createcar');
+        Route::get('/carindex','carindex')->name('carindex');
+        Route::post('/storecar','storecar')->name('storecar');
+        Route::get('/editcar','editcar')->name('editcar');
+        Route::post('/updatecar','updatecar')->name('updatecar');
+        Route::get('/destroycar/{id}','destroycar')->name('destroycar');
+        Route::post('/storeimage/{id}','storeimage')->name('storeimage');
+        Route::get('/destroyimage/{cid}/{id}','destroyimage')->name('destroyimage');
+        Route::get('/showcar/{id}','showcar')->name('showcar');
+        Route::get('/image/{cid}','image')->name('image');
 
     });
 
@@ -73,7 +85,18 @@ Route::get('/', [AdminHomeController::class, 'index'])->name('index');
     Route::post('/update/{id}','update')->name('update');
     Route::get('/destroy/{id}','destroy')->name('destroy');
     Route::get('/show/{id}','show')->name('show');
+    });
+//******************************ADMIN BRAND ROUTES***************************************
+        Route::prefix('/brand')->name('brand.')->controller(AdminBrandController::class)->group(function () {
+            Route::get('/','index')->name('index');
+            Route::get('/create','create')->name('create');
+            Route::post('/store','store')->name('store');
+            Route::get('/edit/{id}','edit')->name('edit');
+            Route::post('/update/{id}','update')->name('update');
+            Route::get('/destroy/{id}','destroy')->name('destroy');
+            Route::get('/show/{id}','show')->name('show');
 });
+
 //******************************ADMIN CAR ROUTES***************************************
     Route::prefix('/car')->name('car.')->controller(AdminCarController::class)->group(function () {
         Route::get('/','index')->name('index');

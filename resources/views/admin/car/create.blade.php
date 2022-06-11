@@ -54,6 +54,16 @@
                             <input type="text" class="form-control" name="description" placeholder="Description">
                         </div>
                         <div class="form-group">
+                            <label >Brand</label>
+
+                            <select class="form-control select2" name="brand_id" style="100px" >
+
+                                @foreach($brands as $rs)
+                                    <option value="{{$rs->id}}">{{$rs->title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
                         <label for="exampleInputName1">Model</label>
                         <input type="text" class="form-control" name="model" placeholder="Model">
                     </div>
@@ -74,7 +84,65 @@
                             <input type="text" class="form-control" name="color" placeholder="Color">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputName1">Detail</label>
+                            <label for="exampleInputName1">Engine Power</label>
+                            <input type="text" class="form-control" name="engine_power" placeholder="Engine Power">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName1">Engine Size</label>
+                            <input type="text" class="form-control" name="engine_size" placeholder="Engine_size">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName1">Adress</label>
+                            <input type="text" class="form-control" name="address" placeholder="Adress">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Body Type
+                            </label>
+                            <select class="form-control" name="body_type">
+                                <option>Hatchback</option>
+                                <option>Sedan</option>
+                                <option>MUV/SUV</option>
+                                <option>Coupe</option>
+                                <option>Convertible</option>
+                                <option>Wagon</option>
+                                <option>Van</option>
+                                <option>Jeep</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Fuel Type</label>
+                            <select class="form-control" name="fuel_type">
+                                <option>Gasoline</option>
+                                <option>Diesel</option>
+                                <option>LPG</option>
+                                <option>Hybrid</option>
+                                <option>Electric</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gear Type</label>
+                            <select class="form-control" name="gear_type">
+                                <option>Automatic</option>
+                                <option>Semi-automatic</option>
+                                <option>Manuel</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Traction Type</label>
+                            <select class="form-control" name="traction_type">
+                                <option>All-Wheel-Drive (AWD)</option>
+                                <option>Front Wheel Drive (FWD),</option>
+                                <option>Rear Wheel Drive (RWD)</option>
+                                <option>4WD(4 wheel drive).</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputName1">Detail(Damage Record-Extra Equiptments)</label>
                             <textarea class="form-control" id="detail" name="detail">
 
                             </textarea>

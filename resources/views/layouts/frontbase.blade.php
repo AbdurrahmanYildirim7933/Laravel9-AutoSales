@@ -43,16 +43,16 @@
 @include('home._header')
 <!-- Main Start -->
 <div class="main-section">
-
-    @include('home._slider')
     @include('home._mainbannerform')
+    @include('home._slider')
+
     @include('home._category')
     @include('home._slider2')
 
     @section('content')
         içerik alanı
     @show
-
+    @include('home._tabs')
 </div>
 
 @include('home._footer')

@@ -2,6 +2,7 @@
 
 @section('title', $category->title . ' Cars')
 
+
 @section('content')
     <div id="breadcrumb">
         <div class="container">
@@ -11,6 +12,7 @@
             </ul>
         </div>
     </div>
+
     <div class="page-section">
             <div class="container">
                 <div class="row">

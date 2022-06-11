@@ -14,6 +14,13 @@
             </ul>
         </div>
     </div>
+    <div class="cs-subheader left" style="background:url(assets/extra-images/bg-counter.jpg) no-repeat 0 0 /cover; min-height:296px; padding:90px 0 0; margin-bottom:50px;">
+        <div class="container">
+            <div class="cs-page-title">
+                <h1 style="color:#fff !important;">Our References</h1>
+            </div>
+        </div>
+    </div>
 
         <!-- Main Start -->
         <div class="main-section">

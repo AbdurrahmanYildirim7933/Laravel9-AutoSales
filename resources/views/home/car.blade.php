@@ -43,7 +43,7 @@
                                             @endphp
 
                                             <div class="star-rating" title="Rated 5 out of 5">
-                                                <span style="width: ({{$average}}*20) %"><strong class="rating">5</strong> out of 6</span>
+                                                <span style="width: ({{$average}}*20) %"><strong class="rating">10</strong> out of 20</span>
                                             </div>
                                             <em>{{number_format($average,1)}} / ({{$data->comment->count('id')}} customer review)</em>
                                             <span class="stock_wrapper">Availability: <span class="stock cs-color">In stock</span></span>
@@ -55,27 +55,14 @@
                                             <div class="description">
                                                 <p>{{$data->description}}</p>
                                             </div>
-                                            <form id='myform' method='POST' action='#' class="cart">
-                                                <div class="quantity">
-                                                    <input type='button' value='-' class='qtyminus' field='quantity' />
-                                                    <input type='text' name='quantity' value='0' class='qty' />
-                                                    <input type='button' value='+' class='qtyplus' field='quantity' />
-                                                </div>
-                                                <button class="single_add_to_cart_button button alt cs-bgcolor" type="submit">Add to cart</button>
-                                            </form>
                                             <div class="product_meta">
                                             	<span class="posted_in">
                                                 	Category:
-                                                	<a rel="tag" href="#">Oil &amp; Filters</a>,
-                                                    <a rel="tag" href="#">Parts</a>,
-                                                    <a rel="tag" href="#">Exterior</a>
+                                                	<a rel="tag">{{$data->category->title}}</a>
                                                 </span>
                                                 <span class="posted_in">
-                                                	tags:
-                                                	<a rel="tag" href="#">Hybrid</a>,
-                                                    <a rel="tag" href="#">Radiator</a>,
-                                                    <a rel="tag" href="#">Wheel Hub</a>,
-                                                    <a rel="tag" href="#">BMW</a>
+                                                	Brand:
+                                                	<a rel="tag">{{$data->brand->title}}</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -96,7 +83,7 @@
                                             <!-- Tab panes -->
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="home">
-                                                    <h5>Product Description</h5>
+                                                    <h5>Car Description</h5>
                                                     <p>{{$data->description}}</p>
                                                     <ul class="list-style">
                                                         <li><i class="icon-check3"></i>A</li>
@@ -108,7 +95,7 @@
 
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="profile">
-                                                    <h5>Product Detail</h5>
+                                                    <h5>Car Detail</h5>
                                                     <p>{!! $data->detail !!}</p>
                                                     <ul class="list-style">
                                                         <li><i class="icon-check3"></i>A</li>
@@ -360,29 +347,28 @@
                                 </div>
                                 <div class="widget widget-tags woocommerce">
                                     <h6>CARS TAG</h6>
-                                    <a href="#">Houses</a>
-                                    <a href="#">Apartment</a>
-                                    <a href="#">Rates</a>
+                                    <a href="#">SUV</a>
+                                    <a href="#">Sedan</a>
+                                    <a href="#">Hatchback</a>
+                                    <a href="#">Vagon</a>
+                                    <a href="#">Van</a>
+                                    <a href="#">Minivan</a>
+                                    <a href="#">4x4</a>
+                                    <a href="#">Sport</a>
+                                    <a href="#">Coupe</a>
                                     <a href="#">Commercial</a>
                                     <a href="#">Building</a>
-                                    <a href="#">Rates</a>
                                     <a href="#">Flats</a>
-                                    <a href="#">People</a>
-                                    <a href="#">United Kingdom</a>
-                                    <a href="#">Commercial</a>
-                                    <a href="#">Building</a>
-                                    <a href="#">Flats</a>
-                                    <a href="#">Houses</a>
-                                    <a href="#">Apartment</a>
-                                    <a href="#">Rates</a>
-                                    <a href="#">Commercial</a>
-                                    <a href="#">Building</a>
+                                    <a href="#">Electric Cars</a>
+                                    <a href="#">Hybrid Cars</a>
+                                    <a href="#">Diesel Rates</a>
+                                    <a href="#">Gas Cars</a>
+                                    <a href="#">Ways</a>
                                     <a href="#">Road</a>
-                                    <a href="#">Flats</a>
-                                    <a href="#">People</a>
-                                    <a href="#">United Kingdom</a>
-                                    <a href="#">Commercial</a>
-                                    <a href="#">Building</a>
+                                    <a href="#">Best Price</a>
+                                    <a href="#">Best Cars</a>
+                                    <a href="#">Best Rates</a>
+                                    <a href="#">BestCommercial</a>
                                 </div>
                             </aside>
                         </div>

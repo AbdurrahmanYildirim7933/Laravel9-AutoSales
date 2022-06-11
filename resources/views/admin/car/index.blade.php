@@ -35,6 +35,7 @@
                         <th style="width: 10px">ID</th>
                         <th>Category</th>
                         <th>Title</th>
+                        <th>Brand</th>
                         <th>Model</th>
                         <th style="width: 400px">Image</th>
                         <th>Image Gallery</th>
@@ -42,6 +43,13 @@
                         <th>Kilometer</th>
                         <th>Year</th>
                         <th>Color</th>
+                        <th>Engine_power</th>
+                        <th>Engine_size</th>
+                        <th>Address</th>
+                        <th>Body_type</th>
+                        <th>Fuel_type</th>
+                        <th>Gear_type</th>
+                        <th>Traction_type</th>
                         <th>Status</th>
                         <th style="width: 40px">Edit</th>
                         <th style="width: 40px">Delete</th>
@@ -54,6 +62,12 @@
                         <td>{{$rs->id}}</td>
                         <td>{{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}</td>
                         <td>{{$rs->title}}</td>
+                        <td>@foreach($brands as $rs2)
+                                @if($rs2->id == $rs->brand_id)
+                                {{$rs2->title}}
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{$rs->model}}</td>
                         <td>
                         @if($rs->image)
@@ -69,6 +83,13 @@
                         <td>{{$rs->kilometer}}</td>
                         <td>{{$rs->year}}</td>
                         <td>{{$rs->color}}</td>
+                        <td>{{$rs->engine_power}}</td>
+                        <td>{{$rs->engine_size}}</td>
+                        <td>{{$rs->address}}</td>
+                        <td>{{$rs->body_type}}</td>
+                        <td>{{$rs->fuel_type}}</td>
+                        <td>{{$rs->gear_type}}</td>
+                        <td>{{$rs->traction_type}}</td>
 
                         <td>{{$rs->status}}</td>
                         <td><a href="{{route('admin.car.edit',['id' => $rs->id])}}" class="btn btn-block btn-info btn-sm">Edit<a/> </td>

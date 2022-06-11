@@ -2,23 +2,35 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 <div class="cs-logo">
                     <div class="cs-media">
                         <figure><a href="{{route('home')}}"><img src="{{asset('assets')}}/images/cs-logo.png" alt="" /></a></figure>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
 
-            <div class="col-lg-16 col-md-16 col-sm-16 col-xs-16">
+
+            <div class="col-lg-13 col-md-13 col-sm-13 col-xs-13">
                 @php
                     $mainCategories = \App\Http\Controllers\HomeController::maincategorylist()
+                @endphp
+                @php
+                    $brands = \App\Http\Controllers\HomeController::brandlist()
                 @endphp
                 <div class="cs-main-nav pull-right">
                     <nav class="main-navigation">
                         <ul>
+                            <li><a href="{{route('home')}}">Home</a></li>
+                            <li><a href="#">Brand</a>
+
+                                <ul class="list-links">
+
+                                    @foreach($brands as $rs)
+                                        <li><a href="{{route('brandcars',['id'=>$rs->id])}}">{{$rs->title}}</a></li>
+                                    @endforeach
+
+                                </ul>
 
                             <li><a href="#">Category</a>
 
@@ -59,49 +71,27 @@
                                 </ul>
                             </li>--!>
 
-                            <li><a href="{{route('home')}}">Home</a></li>
-                            <li><a href="{{route('about')}}">About Us</a></li>
-                            <li><a href="{{route('references')}}">References</a></li>
-                            <li><a href="{{route('faq')}}">FAQ</a></li>
-                            <li><a href="{{route('contact')}}">Contact</a></li>
-                            <li><a href="#">pages</a>
-                                <ul>
-                                    <li><a href="services.html">Our Services</a></li>
-                                    <li><a href="user-post-new-vehicles.html">Post a Vehicle</a></li>
-                                    <li><a href="price-plane.html">Listing Packages</a></li>
-                                    <li><a href="faq.html">FAQ's & Help</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                    <li><a href="search-result.html">Search Result</a></li>
-                                    <li><a href="underconstruction.html">Under Construction</a></li>
-                                    <li><a href="underconstruction-2.html">Under Construction 2</a></li>
-                                    <li><a href="signin-page.html">Signup/Sign in</a></li>
-                                    <li><a href="contact-us.html">Contact us</a></li>
+
+
+                            <li><a href="#">I--Pages--I</a>
+                                <ul class="list-links">
+                                    <li class="menu-item"><a href="{{route('about')}}">About Us</a></li>
+                                    <li class="menu-item"><a href="{{route('references')}}">References</a></li>
+                                    <li class="menu-item"><a href="{{route('faq')}}">FAQ</a></li>
+                                    <li class="menu-item"><a href="{{route('contact')}}">Contact</a></li>
 
                                 </ul>
-                            </li>
-
-                            <li><a href="#">Shop</a>
-                                <ul>
-                                    <li><a href="shop-listing.html">Products</a></li>
-                                    <li><a href="shop-detail.html">Detail View</a></li>
-                                    <li><a href="shop-cart.html">Cart</a></li>
-                                    <li><a href="shop-checkout.html">Checkout</a></li>
-                                </ul>
-                            </li>
                             <li class="cs-user-option">
 
                                 <div class="cs-login">
                                     @auth
                                     <div class="cs-login-dropdown"> <a href="#"><i class="icon-user2"></i> {{Auth::user()->name}} <i class="icon-chevron-down2"></i></a>
 
-                                        <div class="cs-user-dropdown"> <strong>Post A new Ad</strong>
+                                        <div class="cs-user-dropdown">
                                             <ul>
-                                                <li><a href="{{route('userpanel.index')}}">General Setting<span class="cs-bgcolor">3</span></a></li>
-                                                <li><a href="user-car-listing.html">My Posted Cars <span class="cs-bgcolor">23</span></a></li>
+                                                <li><a href="{{route('userpanel.index')}}">General Settings<span class="cs-bgcolor">3</span></a></li>
+                                                <li><a href="{{route('userpanel.index')}}">My Posted Cars <span class="cs-bgcolor">23</span></a></li>
                                                 <li><a href="{{route('userpanel.reviews')}}">My Reviews</a></li>
-                                                <li><a href="user-car-shortlist.html">Shortlisted</a></li>
-                                                <li><a href="user-payments.html">Payment</a></li>
-                                                <li><a href="user-packages.html">Packages</a></li>
                                             </ul>
 
                                             <a class="btn-sign-out" href="/logoutuser">Logout</a>
@@ -109,7 +99,7 @@
                                         </div>
 
                                     </div>
-                                    <a class="cs-bgcolor btn-form" data-toggle="modal" href="http://chimpgroup.com/themeforest/automobile/remote.html" data-target="#user-sign-up" aria-hidden="true"><i class="icon-plus"></i> Sell Car</a>
+                                    <a class="cs-bgcolor btn-form" data-toggle="toggle" href="{{route("userpanel.createcar")}}" data-target="#user-sign-up" aria-hidden="true"><i class="icon-plus"></i> Sell Car</a>
                                     <!-- Modal -->
                                     <div class="modal fade" id="user-sign-up" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">

@@ -62,11 +62,18 @@ class User extends Authenticatable
     #One To Many
     public function reviews(){
 
-        return $this->hasMany(Comment::Class);
+        return $this->hasMany(Comment::class);
     }
 
     public function roles(){
 
         return $this->belongsToMany(Role::Class,'role_users');
     }
+
+    public function cars(){
+
+        return $this->hasMany(Car::class);
+    }
+
+
 }

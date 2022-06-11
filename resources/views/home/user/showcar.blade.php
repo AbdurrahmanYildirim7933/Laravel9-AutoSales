@@ -1,6 +1,6 @@
-@extends('layouts.adminbase')
+@extends('layouts.frontbase_3')
 
-@section('title', 'Show Car:'.$data->title)
+@section('title', 'Show My Car:'.$data->title)
 
 @section('content')
 
@@ -10,13 +10,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <a href="{{route('admin.car.edit',['id' => $data->id])}}" class="btn btn-info btn-fw" style="width: 100px">Edit</a>
-                        <a href="{{route('admin.car.destroy',['id' => $data->id])}}" onclick="return confirm('Deleting !! Are u sure ?')" class="btn btn-danger btn-fw" style="width: 100px">Delete</a>
+                        <a href="{{route('userpanel.editcar',['id' => $data->id])}}" class="btn btn-info btn-fw" style="width: 100px">Edit</a>
+                        <a href="{{route('userpanel.destroycar',['id' => $data->id])}}" onclick="return confirm('Deleting !! Are u sure ?')" class="btn btn-danger btn-fw" style="width: 100px">Delete</a>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Show Car</li>
+                            <li class="breadcrumb-item"><a href="{{route('home.index')}}">Home</a></li>
+                            <li class="breadcrumb-item active">Show My Car</li>
                         </ol>
                     </div>
                 </div>
