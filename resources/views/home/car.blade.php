@@ -59,10 +59,18 @@
                                             	<span class="posted_in">
                                                 	Category:
                                                 	<a rel="tag">{{$data->category->title}}</a>
-                                                </span>
-                                                <span class="posted_in">
-                                                	Brand:
+                                                    Brand:
                                                 	<a rel="tag">{{$data->brand->title}}</a>
+                                                                                    <h7Color: {{$data->color}}
+
+
+                                                </span>
+                                                <h6>Dealer:<ins><span class="amount cs-color">{{$data->user->name}}</span></ins></h6>
+                                                <h6>Color: {{$data->color}}</h6>
+
+
+                                                <span class="posted_in">
+
                                                 </span>
                                             </div>
                                         </div>

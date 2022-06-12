@@ -405,7 +405,7 @@
                                             <figure> <img  src="{{Storage::url($rs->image)}}" alt=""/></figure>
                                         </div>
                                         <div class="auto-text">
-                                            <span class="cs-categories"><a href="#">Timlers Motors</a></span>
+                                            <span class="cs-categories"><a href="#"></a></span>
                                             <div class="post-title">
                                                 <h4><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h4>
                                                 <h6><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
@@ -421,12 +421,15 @@
                                             <div class="btn-list">
                                                 <a href="javascript:void(0)" class="btn btn-danger collapsed" data-toggle="collapse" data-target="#list-view1"></a><div id="list-view1" class="collapse">
                                                     <ul>
-                                                        <li>30/36 est. mpg 18</li>
-                                                        <li>Black front grille with chrome accent</li>
-                                                        <li>Cruise control</li>
-                                                        <li>Remote keyless entry system</li>
-                                                        <li>Tilt 3-spoke steering wheel with audio controls</li>
-                                                        <li>15-in. alloy wheels</li>
+                                                        <li>Model: {{$rs->model}}</li>
+                                                        <li>Year: {{$rs->year}}</li>
+                                                        <li>Color: {{$rs->color}}</li>
+                                                        <li>Kilometer: {{$rs->kilometer}}</li>
+                                                        <li>Engine Power/Size : {{$rs->engine_power}}/{{$rs->engine_size}}</li>
+                                                        <li>Location: {{$rs->address}}</li>
+                                                        <li>Fuel type: {{$rs->fuel_type}}</li>
+                                                        <li>Gear Type:{{$rs->gear_type}}</li>
+                                                        <li>Traction: {{$rs->traction_type}}</li>
                                                     </ul>
                                                 </div>
                                             </div>

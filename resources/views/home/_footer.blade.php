@@ -26,7 +26,7 @@
                             <h6 style="color:#fff !important">Top Categores</h6>
                         </div>
                         <ul>
-                            <li><a href="#">All Toyota Vehicles</a></li>
+                            <li><a href="#">All AUTO-SALES Vehicles</a></li>
                             <li><a href="#">SUVs</a></li>
                             <li><a href="#">Trucks</a></li>
                             <li><a href="#">Cars</a></li>
@@ -47,7 +47,7 @@
                         <ul>
                             <li><a href="#">Shopping Tools</a></li>
                             <li><a href="#">Trade-In Value</a></li>
-                            <li><a href="#">Customize Your Own Toyota</a></li>
+                            <li><a href="#">Customize Your Own Car</a></li>
                             <li><a href="#">Search Inventory</a></li>
                             <li><a href="#">Find a Dealer</a></li>
                             <li><a href="#">Local Specials</a></li>
@@ -60,7 +60,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="widget widget-news-letter">
                         <div class="widget-section-title">
-                            <h6 style="color:#fff !important">SIGN UP FOR TOYOTA UPDATES</h6>
+                            <h6 style="color:#fff !important">SIGN UP FOR AUTO-SALES UPDATES</h6>
                         </div>
                         <p>Recently received some brochures from my traders  here are some that might be of interest. </p>
                         <div class="cs-form">

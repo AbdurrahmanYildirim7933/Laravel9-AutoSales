@@ -59,8 +59,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/createcar','createcar')->name('createcar');
         Route::get('/carindex','carindex')->name('carindex');
         Route::post('/storecar','storecar')->name('storecar');
-        Route::get('/editcar','editcar')->name('editcar');
-        Route::post('/updatecar','updatecar')->name('updatecar');
+        Route::get('/editcar/{id}','editcar')->name('editcar');
+        Route::post('/updatecar/{id}','updatecar')->name('updatecar');
         Route::get('/destroycar/{id}','destroycar')->name('destroycar');
         Route::post('/storeimage/{id}','storeimage')->name('storeimage');
         Route::get('/destroyimage/{cid}/{id}','destroyimage')->name('destroyimage');

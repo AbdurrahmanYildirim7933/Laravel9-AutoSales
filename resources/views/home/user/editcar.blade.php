@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                                     <div class="section-title">
-                                        <h3 class="title">USER PROFILE</h3>
+                                        <h3 class="title">MY CAR EDIT PAGE</h3>
                                         <hr>
                                     </div>
                                     <div class="row">
@@ -45,7 +45,7 @@
                                             <section class="content">
 
                                                 <div class="card">
-                                                    <form role="form" action="{{route('userpanel.updatecar')}}" method="post" enctype="multipart/form-data">
+                                                    <form role="form" action="{{route('userpanel.updatecar',['id' => $data->id])}}" method="post" enctype="multipart/form-data">
                                                         @csrf
                                                         <div class="card-body">
                                                             <div class="form-group">
@@ -189,15 +189,6 @@
                                                                         <label class="custom-file-label" for="exampleInputFile">Choose image file</label>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>Status</label>
-                                                                <select class="form-control" name="status">
-                                                                    <option selected>{{$data->status}}</option>
-                                                                    <option>True</option>
-                                                                    <option>False</option>
-
-                                                                </select>
                                                             </div>
                                                             <button type="submit" class="btn btn-primary mr-2">Update Data</button>
                                                             <button class="btn btn-light">Cancel</button>

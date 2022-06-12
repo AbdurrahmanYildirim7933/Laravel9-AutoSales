@@ -7,6 +7,7 @@ use App\Models\Brand;
 use App\Models\Car;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminCarController extends Controller
@@ -57,7 +58,7 @@ class AdminCarController extends Controller
         //
         $data= new Car();
         $data->category_id = $request->category_id;
-        $data->user_id = $request->user_id;
+        $data->user_id = Auth::id();
         $data->brand_id = $request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
@@ -128,7 +129,6 @@ class AdminCarController extends Controller
     {
         $data= Car::find($id);
         $data->category_id = $request->category_id;
-        $data->user_id = 0;
         $data->brand_id = $request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;

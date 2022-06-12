@@ -140,11 +140,13 @@ class HomeController extends Controller
         //dd($request);
         //echo "$id";
         //exit();
+        $data = Car :: all();
         $category=Category::find($id);
         $cars = DB::table('cars')->where('category_id', $id)->get();
         return view('home.categorycars',[
             'category' => $category,
             'cars' => $cars,
+            'data' => $data
 
         ]);
 
@@ -152,14 +154,14 @@ class HomeController extends Controller
     public function brandcars ($id)
     {
         $brand = Brand::find($id);
-
+        $data = Car::find($id);
         $cars = DB::table('cars')->where('brand_id', $id)->get();
 
         return view('home.brandcars',[
 
             'cars' => $cars,
-            'brand' => $brand
-
+            'brand' => $brand,
+            'data' => $data
         ]);
 
     }

@@ -18,8 +18,8 @@
                                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
                                         <div class="cs-media">
-                                            <figure> <a href="{{route('car',['id'=>$rs->id])}}"> <img src="{{Storage::url($rs->image)}}" style="width:350px; height: 350px" alt=""/> </a>
-                                                <figcaption> <a href="{{route('car',['id'=>$rs->id])}}"> </figcaption>
+                                            <figure><a href="{{route('car',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" style="width:350px; height: 350px" alt=""/>
+                                                <figcaption></figcaption></a>
                                             </figure>
                                             <div class="caption-text"> <a href="{{route('car',['id'=>$rs->id])}}">
                                                     <h2>{{$rs->title}}</h2>

@@ -35,6 +35,7 @@
                         <th style="width: 10px">ID</th>
                         <th>Category</th>
                         <th>Title</th>
+                        <th>Dealer</th>
                         <th>Brand</th>
                         <th>Model</th>
                         <th style="width: 400px">Image</th>
@@ -62,6 +63,7 @@
                         <td>{{$rs->id}}</td>
                         <td>{{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}</td>
                         <td>{{$rs->title}}</td>
+                        <td>{{$rs->user->name}}</td>
                         <td>@foreach($brands as $rs2)
                                 @if($rs2->id == $rs->brand_id)
                                 {{$rs2->title}}

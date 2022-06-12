@@ -83,7 +83,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="section-title" style="text-align:center; color:#333333; margin-bottom:45px;">
                     <h3 style="margin-bottom:5px;">WHY CHOOSE US</h3>
-                    <p>It will help us find the Toyota you're looking for in your area.</p>
+                    <p>It will help us find the AUTO-SALES you're looking for in your area.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -146,10 +146,10 @@
 <div class="page-section" style="background:#19171a;;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-19 col-md-12 col-sm-12 col-xs-12">
                 <div class="cs-ad" style="text-align:center; padding:55px 0 25px;">
                     <div class="cs-media">
-                        <figure> <a href="#"><img alt="" src="{{asset('assets')}}/extra-images/cs-ad-img.jpg"></a> </figure>
+                        <figure><img alt="" src="{{asset('assets')}}/extra-images/image-frame-2.png"></figure>
                     </div>
                 </div>
             </div>

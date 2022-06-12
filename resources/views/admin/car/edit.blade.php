@@ -15,11 +15,13 @@
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1>Edit Car: {{$data->title}}</h1>
+                        <h3>Dealer-{{$data->user->name}}</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.index',)}}">Home</a></li>
                             <li class="breadcrumb-item active">Edit Car</li>
+
                         </ol>
                     </div>
                 </div>
@@ -55,7 +57,7 @@
                         <label for="exampleInputName1">Description</label>
                         <input type="text" class="form-control" name="description" value="{{$data->description}}">
                     </div>
-                          <div class="form-group">
+                          <div>
                               <label >Brand</label>
 
                               <select class="form-control select2" name="brand_id" style="100px" >
