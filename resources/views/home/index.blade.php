@@ -33,7 +33,7 @@
                                     <div id="home" class="tab-pane fade in active">
                                         <div class="row">
                                             @foreach($cars as $rs)
-                                                @if($rs->category->title == "Sport")
+                                                @if($rs->category->title == "Sport" and  $rs->status == 'True')
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                 <div class="auto-listing auto-grid">
                                                     <div class="cs-media">
@@ -41,7 +41,7 @@
                                                             <figcaption> <span class="auto-featured">On Sale Now...</span> </figcaption></a>
                                                         </figure>
                                                     </div>
-                                                    <div class="auto-text"> <span class="cs-categories">{{$rs->user->name}}</span>
+                                                    <div class="auto-text"> <span class="cs-categories">DEALER: {{$rs->user->name}}</span>
                                                         <div class="post-title">
                                                             <h6><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
                                                             <div class="auto-price"><span class="cs-color">$25,000</span> <em>MSRP $27,000</em></div>
@@ -75,7 +75,7 @@
                                     <div id="menu1" class="tab-pane fade">
                                         <div class="row">
                                             @foreach($cars as $rs)
-                                                @if($rs->category->title == "SUV")
+                                                @if($rs->category->title == "SUV" and  $rs->status == 'True')
                                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                         <div class="auto-listing auto-grid">
                                                             <div class="cs-media">
@@ -83,7 +83,7 @@
                                                                         <figcaption> <span class="auto-featured">On Sale Now...</span> </figcaption></a>
                                                                 </figure>
                                                             </div>
-                                                            <div class="auto-text"> <span class="cs-categories">{{$rs->user->name}}</span>
+                                                            <div class="auto-text"> <span class="cs-categories">DEALER: {{$rs->user->name}}</span>
                                                                 <div class="post-title">
                                                                     <h6><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
                                                                     <div class="auto-price"><span class="cs-color">$25,000</span> <em>MSRP $27,000</em></div>
@@ -117,7 +117,7 @@
                                     <div id="menu2" class="tab-pane fade">
                                         <div class="row">
                                             @foreach($cars as $rs)
-                                                @if($rs->category->title == "Hatchback")
+                                                @if($rs->category->title == "Hatchback" and  $rs->status == 'True')
                                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                         <div class="auto-listing auto-grid">
                                                             <div class="cs-media">
@@ -125,7 +125,7 @@
                                                                         <figcaption> <span class="auto-featured">On Sale Now...</span> </figcaption></a>
                                                                 </figure>
                                                             </div>
-                                                            <div class="auto-text"> <span class="cs-categories"><a href="#">Timlers Motors</a></span>
+                                                            <div class="auto-text"> <span class="cs-categories"><a href="#">DEALER: {{$rs->user->name}}</a></span>
                                                                 <div class="post-title">
                                                                     <h6><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
                                                                     <div class="auto-price"><span class="cs-color">$25,000</span> <em>MSRP $27,000</em></div>
@@ -159,7 +159,7 @@
                                     <div id="menu3" class="tab-pane fade">
                                         <div class="row">
                                             @foreach($cars as $rs)
-                                                @if($rs->category->title == "Sedan")
+                                                @if($rs->category->title == "Sedan" and  $rs->status == 'True')
                                                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                                         <div class="auto-listing auto-grid">
                                                             <div class="cs-media">
@@ -167,7 +167,7 @@
                                                                         <figcaption> <span class="auto-featured">On Sale Now...</span> </figcaption></a>
                                                                 </figure>
                                                             </div>
-                                                            <div class="auto-text"> <span class="cs-categories"><a href="#">USERNAME</a></span>
+                                                            <div class="auto-text"> <span class="cs-categories"><a href="#">DEALER: {{$rs->user->name}}</a></span>
                                                                 <div class="post-title">
                                                                     <h6><a href="{{route('car',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
                                                                     <div class="auto-price"><span class="cs-color">$25,000</span> <em>MSRP $27,000</em></div>

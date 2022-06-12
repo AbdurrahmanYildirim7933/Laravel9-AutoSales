@@ -15,6 +15,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <ul class="cs-auto-box-slider row">
                                 @foreach($carlist1 as $rs)
+                                    @if($rs->status == 'True')
                                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
                                         <div class="cs-media">
@@ -35,6 +36,7 @@
                                             <a href="{{route('car',['id'=>$rs->id])}}" class="cs-button pull-right"><i class="icon-arrow_forward"></i></a>
 
                                         </div>
+                                        @endif()
                                         @endforeach
                                     </li>
 

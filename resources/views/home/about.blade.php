@@ -73,7 +73,7 @@
                                     <li><i class="icon-check2 cs-color"></i>Ullamcorper conubia, aenean quisque mattis malesuada.</li>
                                     <li><i class="icon-check2 cs-color"></i>quam quisque ligula, maecenas ligula proin ut augue.</li>
                                 </ul>
-                                <a href="#" class="btn-contact cs-color csborder-color">Contact us</a> </div>
+                                <a href="{{route('contact')}}" class="btn-contact cs-color csborder-color">Contact us</a> </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="cs-video-frame">

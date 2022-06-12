@@ -89,8 +89,8 @@
 
                                         <div class="cs-user-dropdown">
                                             <ul>
-                                                <li><a href="{{route('userpanel.index')}}">General Settings<span class="cs-bgcolor">3</span></a></li>
-                                                <li><a href="{{route('userpanel.carindex')}}">My Posted Cars <span class="cs-bgcolor">23</span></a></li>
+                                                <li><a href="{{route('userpanel.index')}}">General Settings</a></li>
+                                                <li><a href="{{route('userpanel.carindex')}}">My Posted Cars</a></li>
                                                 <li><a href="{{route('userpanel.reviews')}}">My Reviews</a></li>
                                             </ul>
 

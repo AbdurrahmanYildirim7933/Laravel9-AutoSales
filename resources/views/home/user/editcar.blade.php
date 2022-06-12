@@ -2,6 +2,10 @@
 
 @section('title','User Panel')
 
+@section('head')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <div id="breadcrumb">
@@ -223,5 +227,17 @@
         </div>
         <!-- Main End -->
 
-@endsection
+        @endsection
+
+        @section('foot')
+            <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+            <script>
+                $(function () {
+                    //Summernote
+                    $('.textarea').summernote()
+                })
+            </script>
+        @endsection
+        })
 

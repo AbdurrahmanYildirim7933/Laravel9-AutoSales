@@ -61,13 +61,18 @@
                                                 	<a rel="tag">{{$data->category->title}}</a>
                                                     Brand:
                                                 	<a rel="tag">{{$data->brand->title}}</a>
-                                                                                    <h7Color: {{$data->color}}
-
-
                                                 </span>
                                                 <h6>Dealer:<ins><span class="amount cs-color">{{$data->user->name}}</span></ins></h6>
-                                                <h6>Color: {{$data->color}}</h6>
-
+                                                <li>Color: {{$data->color}}</li>
+                                                <li>Model: {{$data->model}}</li>
+                                                <li>Year: {{$data->year}}</li>
+                                                <li>Color: {{$data->color}}</li>
+                                                <li>Kilometer: {{$data->kilometer}}</li>
+                                                <li>Engine Power/Size : {{$data->engine_power}}/{{$data->engine_size}}</li>
+                                                <li>Location: {{$data->address}}</li>
+                                                <li>Fuel type: {{$data->fuel_type}}</li>
+                                                <li>Gear Type:{{$data->gear_type}}</li>
+                                                <li>Traction: {{$data->traction_type}}</li>
 
                                                 <span class="posted_in">
 
@@ -210,7 +215,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="columns-3">
+                                        <!-- <div class="columns-3">
                                             <div class="shop-sec-title">
                                                 <h3>Related Cars</h3>
                                             </div>
@@ -271,11 +276,11 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div>  --!>
                                     </div>
                                 </div>
                             </div>
-                            <aside class="page-sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <!--    <aside class="page-sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                 <div class="widget woocommerce widget_product_categories">
                                     <h6>Car Categories</h6>
                                     <ul>
@@ -378,7 +383,7 @@
                                     <a href="#">Best Rates</a>
                                     <a href="#">BestCommercial</a>
                                 </div>
-                            </aside>
+                            </aside>  --!>
                         </div>
                     </div>
                 </div>

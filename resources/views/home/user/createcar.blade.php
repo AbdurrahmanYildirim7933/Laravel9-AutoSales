@@ -2,7 +2,9 @@
 
 @section('title','User Panel')
 
-@section('content')
+@section('head')
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <div id="breadcrumb">
@@ -184,14 +186,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label>Status</label>
-                                                                <select class="form-control" name="status">
-                                                                    <option>True</option>
-                                                                    <option>False</option>
-
-                                                                </select>
-                                                            </div>
                                                             <button href="{{route('userpanel.index')}}" type="submit" class="btn btn-primary mr-2">Submit</button>
                                                             <button class="btn btn-light">Cancel</button>
                                                         </div>
@@ -224,7 +218,6 @@
         </div>
         <!-- Main End -->
 
-        @endsection
 
 
 
